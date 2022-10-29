@@ -114,7 +114,7 @@ const LinkPage = () => {
           btnList.map((button, i) => (
             <a
               key={i}
-              className="h-16 text-sm md:text-base bg-stale border w-full rounded-lg flex justify-center items-center"
+              className="h-16 text-sm md:text-base bg-stale border w-full rounded-lg flex justify-center items-center hover:bg-gray-300"
               href={button.redirect}
               target={button.target}
               id={button.id}
