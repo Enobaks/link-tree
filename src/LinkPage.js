@@ -1,32 +1,45 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import profileImage from "./assets/profile__img.png";
 import footerImage from "./assets/I4G.png";
-// import Button from "./components/Button";
 
 const LinkPage = () => {
+  const slackName = "Emmanuel Enobakhare";
   const btnList = [
-    { title: "Twitter Link", id: "btn__twitter", redirect: "twitter#" },
+    {
+      title: "Twitter Link",
+      id: "btn__twitter",
+      redirect: "https://twitter.com/hnginternship",
+      target: "_blank",
+    },
     {
       title: "Zuri Team",
       id: "btn__zuri",
       redirect: "https://training.zuri.team/",
+      target: "_blank",
     },
-    { title: "Zuri Books", id: "books", redirect: "http://books.zuri.team " },
+    {
+      title: "Zuri Books",
+      id: "books",
+      redirect: "http://books.zuri.team",
+      target: "_blank",
+    },
     {
       title: "Python Books",
       id: "book__python",
-      redirect: `http://books.zuri.team/python-for-beginners?ref_id=<yourslackname>`,
+      redirect: `http://books.zuri.team/python-for-beginners?ref_id=${slackName}`,
+      target: "_blank",
     },
     {
       title: "Background Check for Coders",
       id: "pitch",
-      redirect: "https://background.zuri.team,",
+      redirect: "https://background.zuri.team",
+      target: "_blank",
     },
     {
       title: "Design Books",
       id: "book__design",
-      redirect: "https://books.zuri.team/design-rules ",
+      redirect: "https://books.zuri.team/design-rules",
+      target: "_blank",
     },
   ];
   return (
@@ -44,26 +57,27 @@ const LinkPage = () => {
           className="username text-primary text-xl font-bold mt-6"
           id="twitter"
         >
-          Annette Black
+          Enobakhare Emmanuela
         </p>
-        div
-        <svg
-          width="18"
-          height="16"
-          viewBox="0 0 18 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute top-0 right-64 hidden md:block"
-        >
-          <path
-            d="M16.3261 8.50617C16.5296 8.3318 16.6313 8.24461 16.6686 8.14086C16.7013 8.0498 16.7013 7.9502 16.6686 7.85914C16.6313 7.75539 16.5296 7.6682 16.3261 7.49383L9.26719 1.44331C8.917 1.14315 8.74191 0.993063 8.59367 0.989386C8.46483 0.986191 8.34177 1.04279 8.26035 1.14269C8.16667 1.25764 8.16667 1.48825 8.16667 1.94948V5.52886C6.38777 5.84007 4.75966 6.74146 3.54976 8.09489C2.23069 9.57043 1.50103 11.48 1.5 13.4591V13.9691C2.37445 12.9157 3.46626 12.0638 4.70063 11.4716C5.78891 10.9495 6.96535 10.6403 8.16667 10.5588V14.0505C8.16667 14.5117 8.16667 14.7424 8.26035 14.8573C8.34177 14.9572 8.46483 15.0138 8.59367 15.0106C8.74191 15.0069 8.917 14.8569 9.26719 14.5567L16.3261 8.50617Z"
-            stroke="#98A2B3"
-            stroke-width="1.66667"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-        <div className="hamburger block absolute top-0 right-5 border border-dashed border-stale md:hidden">
+        <div className="absolute top-0 right-64 hidden md:flex justify-center items-center border border-dashed rounded-2xl w-8 h-8">
+          <svg
+            width="18"
+            height="16"
+            viewBox="0 0 18 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className=""
+          >
+            <path
+              d="M16.3261 8.50617C16.5296 8.3318 16.6313 8.24461 16.6686 8.14086C16.7013 8.0498 16.7013 7.9502 16.6686 7.85914C16.6313 7.75539 16.5296 7.6682 16.3261 7.49383L9.26719 1.44331C8.917 1.14315 8.74191 0.993063 8.59367 0.989386C8.46483 0.986191 8.34177 1.04279 8.26035 1.14269C8.16667 1.25764 8.16667 1.48825 8.16667 1.94948V5.52886C6.38777 5.84007 4.75966 6.74146 3.54976 8.09489C2.23069 9.57043 1.50103 11.48 1.5 13.4591V13.9691C2.37445 12.9157 3.46626 12.0638 4.70063 11.4716C5.78891 10.9495 6.96535 10.6403 8.16667 10.5588V14.0505C8.16667 14.5117 8.16667 14.7424 8.26035 14.8573C8.34177 14.9572 8.46483 15.0138 8.59367 15.0106C8.74191 15.0069 8.917 14.8569 9.26719 14.5567L16.3261 8.50617Z"
+              stroke="#98A2B3"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <div className="hamburger absolute rounded-2xl flex justify-center items-center top-0 right-5 border border-dashed border-stale md:hidden w-8 h-8">
           <svg
             width="16"
             height="4"
@@ -95,17 +109,18 @@ const LinkPage = () => {
           </svg>
         </div>
       </div>
-      <div className="buttons-wrap w-4/5 m-auto h-auto flex flex-col gap-y-6 mt-14">
+      <div className="buttons-wrap w-11/12 md:w-4/5 m-auto h-auto flex flex-col gap-y-6 mt-14">
         {btnList &&
           btnList.map((button, i) => (
-            <Link
+            <a
               key={i}
-              className="h-16 bg-stale border w-full rounded-lg flex justify-center items-center"
-              to={button.redirect}
+              className="h-16 text-sm md:text-base bg-stale border w-full rounded-lg flex justify-center items-center"
+              href={button.redirect}
+              target={button.target}
               id={button.id}
             >
               {button.title}
-            </Link>
+            </a>
           ))}
       </div>
       <div className="social-links flex h-24 justify-center items-center gap-x-7 mt-4">
@@ -157,14 +172,14 @@ const LinkPage = () => {
           </defs>
         </svg>
       </div>
-      <div className="footer h-40 flex justify-between items-center">
-        <p className="text-2xl text-black font-bold ml-28">
+      <div className="footer h-48 md:h-40 flex flex-col md:flex-row justify-between items-left p-4 md:items-center my-8">
+        <p className="text-xl md:text-2xl text-black font-bold md:ml-28">
           Zuri
-          <span className="rounded-lg bg-red-600 h-3 w-3 inline-block"></span>
+          <span className="rounded-lg bg-red-600 h-2 w-2 md:h-3 md:w-3 inline-block"></span>
           Internship
         </p>
-        <p>HNG Internship 9 Frontend Task</p>
-        <div className="mr-28">
+        <p className="text-sm md:text-base">HNG Internship 9 Frontend Task</p>
+        <div className="md:mr-28">
           <img src={footerImage} alt="logo" className="h-8" />
         </div>
       </div>
